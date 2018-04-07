@@ -1,3 +1,4 @@
+" The ultimate vimrc https://github.com/amix/vimrc 
 " wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin()
 
