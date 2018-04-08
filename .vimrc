@@ -63,9 +63,11 @@ map <C-l> <C-W>l
 nmap ,c @<Esc>kyWjP<BS>
 
 " Mappings for moving lines up and down in all modes.
-nmap <C-j> :m+<CR>
-vmap <C-j> :m'>+<CR>gv
-imap <C-j> <Esc>:m+<CR>
-nmap <C-k> :m-2<CR>
-imap <C-k> <Esc>:m-2<CR>
-vmap <C-k> :m-2<CR>gv
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
