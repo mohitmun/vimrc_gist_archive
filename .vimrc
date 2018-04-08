@@ -6,13 +6,14 @@ call plug#begin()
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
-Plug 'terryma/vim-multiple-cursors' " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
+Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'amix/vim-zenroom2'
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 syntax on
 
@@ -47,11 +48,6 @@ set incsearch
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
-" If a file is changed outside of vim, automatically reload it without asking
-set autoread
-" Don't make backups at all
-set nobackup
-set nowritebackup
 
 " Smart way to move between windows
 map <C-j> <C-W>j
