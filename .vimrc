@@ -61,3 +61,11 @@ map <C-l> <C-W>l
 
 " copied previous line word by word https://web.archive.org/web/20160429070600/http://vim.wikia.com/wiki/Duplicate_previous_line_word_by_word# 
 nmap ,c @<Esc>kyWjP<BS>
+
+" Mappings for moving lines up and down in all modes.
+nmap <C-j> :m+<CR>
+vmap <C-j> :m'>+<CR>gv
+imap <C-j> <Esc>:m+<CR>
+nmap <C-k> :m-2<CR>
+imap <C-k> <Esc>:m-2<CR>
+vmap <C-k> :m-2<CR>gv
