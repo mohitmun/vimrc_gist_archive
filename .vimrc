@@ -47,6 +47,11 @@ set incsearch
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+" If a file is changed outside of vim, automatically reload it without asking
+set autoread
+" Don't make backups at all
+set nobackup
+set nowritebackup
 
 " Smart way to move between windows
 map <C-j> <C-W>j
