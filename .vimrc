@@ -14,6 +14,7 @@ Plug 'amix/vim-zenroom2'
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
+Plug 'mattn/gist-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
@@ -33,7 +34,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " End NERDTree
 
-let g:gitgutter_diff_base = 'HEAD'
+" let g:gitgutter_diff_base = 'HEAD'
 
 "Always show current position
 set ruler
@@ -47,6 +48,7 @@ set showmatch
 "" Makes search act like search in modern browser
 set incsearch
 
+set backspace=indent,eol,start
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
@@ -76,3 +78,5 @@ vnoremap ˚ :m '<-2<CR>gv=gv
 
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
+
+set mouse=a
