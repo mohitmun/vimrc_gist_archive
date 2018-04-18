@@ -9,11 +9,13 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'terryma/vim-multiple-cursors' " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'amix/vim-zenroom2'
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 syntax on
 
@@ -71,3 +73,6 @@ inoremap ˚ <Esc>:m .-2<CR>==gi
 
 vnoremap ∆ :m '>+1<CR>gv=gv
 vnoremap ˚ :m '<-2<CR>gv=gv
+
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
