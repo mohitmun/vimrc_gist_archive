@@ -15,6 +15,7 @@ Plug 'amix/vim-zenroom2'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim' " dependancy for gist-vim
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
