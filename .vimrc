@@ -1,3 +1,4 @@
+" GistID: 55140b5b9c723540883f823616575c58
 " The ultimate vimrc https://github.com/amix/vimrc 
 " wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim and
 " move it to ~/.vim/autoload and run :PlugInstall
@@ -13,6 +14,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'amix/vim-zenroom2'
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim' " dependancy for gist-vim
@@ -24,16 +26,6 @@ syntax on
 set number
 set tabstop=2 shiftwidth=2 expandtab
 set updatetime=100
-
-" Start NERDTree
-
-" autocmd VimEnter * NERDTree
-" Go to previous (last accessed) window.
-autocmd VimEnter * wincmd p
-"below command closes nerdtree if now files left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" End NERDTree
 
 " let g:gitgutter_diff_base = 'HEAD'
 
@@ -91,3 +83,24 @@ highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Re
 highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
 highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
 highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
+
+" https://superuser.com/a/189198/630985
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Nerd Tree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let NERDTreeShowHidden=0
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let g:NERDTreeWinSize=35
+map <leader>nn :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark<Space>
+map <leader>nf :NERDTreeFind<cr>
+
+" autocmd VimEnter * NERDTree
+" Go to previous (last accessed) window.
+autocmd VimEnter * wincmd p
+"below command closes nerdtree if now files left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
