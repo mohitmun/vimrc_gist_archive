@@ -20,6 +20,7 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim' " dependancy for gist-vim
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
 syntax on
 
@@ -89,6 +90,11 @@ vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <C-r><C-o>+
+set foldmethod=indent
+
+" https://stackoverflow.com/a/360634/2577465
+nnoremap <space> za
+vnoremap <space> zf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
