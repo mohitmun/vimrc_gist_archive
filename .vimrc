@@ -101,7 +101,11 @@ nnoremap <space> za
 vnoremap <space> zf
 
 let g:gist_get_multiplefile = 1
+let g:gist_list_vsplit = 1
+
 set nofoldenable    " disable folding
+
+map <C-p> :FZF<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -117,3 +121,14 @@ map <leader>nf :NERDTreeFind<cr>
 autocmd VimEnter * wincmd p
 "below command closes nerdtree if now files left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" http://vim.wikia.com/wiki/Use_Ctrl-O_instead_of_Esc_in_insert_mode_mappings
+imap <C-h> <C-o>h
+imap <C-j> <C-o>j
+imap <C-k> <C-o>k
+imap <C-l> <C-o>l
+
+map <leader>h <C-w><
+map <leader>j <C-w>+
+map <leader>k <C-w>-
+map <leader>l <C-w>>
