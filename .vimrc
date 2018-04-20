@@ -21,6 +21,8 @@ Plug 'mattn/webapi-vim' " dependancy for gist-vim
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-ruby/vim-ruby'
+Plug 'Chiel92/vim-autoformat'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 syntax on
 
@@ -95,6 +97,9 @@ set foldmethod=indent
 " https://stackoverflow.com/a/360634/2577465
 nnoremap <space> za
 vnoremap <space> zf
+
+let g:gist_get_multiplefile = 1
+set nofoldenable    " disable folding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
