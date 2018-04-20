@@ -132,3 +132,5 @@ map <leader>h <C-w><
 map <leader>j <C-w>+
 map <leader>k <C-w>-
 map <leader>l <C-w>>
+
+nnoremap ; :
