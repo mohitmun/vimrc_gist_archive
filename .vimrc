@@ -134,6 +134,12 @@ map <leader>j <C-w>+
 map <leader>k <C-w>-
 map <leader>l <C-w>>
 
-nnoremap ; :
+"http://vim.wikia.com/wiki/Map_semicolon_to_colon
+map ; :
+noremap ;; ;
 
+"https://stackoverflow.com/questions/9051837/how-to-map-c-to-toggle-comments-in-vim?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa#comment11360335_9051932
+nmap <C-_> <leader>c<Space>
+vmap <C-_> <leader>c<Space>
+"imap <C-/> <leader>c<Space>
 map <silent> <Leader><Leader> :nohlsearch<cr>
