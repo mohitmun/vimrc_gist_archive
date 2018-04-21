@@ -134,4 +134,5 @@ map <leader>k <C-w>-
 map <leader>l <C-w>>
 
 nnoremap ; :
-nnoremap <esc> :noh<return><esc>
+
+map <silent> <Leader><Leader> :nohlsearch<cr>
