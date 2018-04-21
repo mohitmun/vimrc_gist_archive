@@ -38,7 +38,7 @@ set updatetime=100
 set ruler
 
 " Highlight search results
-"set hlsearch
+set hlsearch
 set ignorecase
 " Show matching brackets when text indicator is over them
 set showmatch 
@@ -134,3 +134,4 @@ map <leader>k <C-w>-
 map <leader>l <C-w>>
 
 nnoremap ; :
+nnoremap <esc> :noh<return><esc>
