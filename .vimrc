@@ -141,5 +141,9 @@ noremap ;; ;
 "https://stackoverflow.com/questions/9051837/how-to-map-c-to-toggle-comments-in-vim?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa#comment11360335_9051932
 nmap <C-_> <leader>c<Space>
 vmap <C-_> <leader>c<Space>
-"imap <C-/> <leader>c<Space>
+imap <C-_> <Esc><leader>c<Space>li
 map <silent> <Leader><Leader> :nohlsearch<cr>
+
+map <leader>f :Ag<CR>
+"http://vim.wikia.com/wiki/Avoid_the_escape_key
+imap <leader>i <Esc>
