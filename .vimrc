@@ -147,3 +147,11 @@ map <silent> <Leader><Leader> :nohlsearch<cr>
 map <leader>f :Ag<CR>
 "http://vim.wikia.com/wiki/Avoid_the_escape_key
 imap <leader>i <Esc>
+
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+set undofile
+
+"https://medium.com/@Aenon/vim-swap-backup-undo-git-2bf353caa02f
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp// 
