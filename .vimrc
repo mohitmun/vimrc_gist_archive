@@ -25,6 +25,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 syntax on
 
@@ -38,7 +39,7 @@ set updatetime=100
 set ruler
 
 " Highlight search results
-"set hlsearch
+set hlsearch
 set ignorecase
 " Show matching brackets when text indicator is over them
 set showmatch 
@@ -122,7 +123,7 @@ autocmd VimEnter * wincmd p
 "below command closes nerdtree if now files left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" http://vim.wikia.com/wiki/Use_Ctrl-O_instead_of_Esc_in_insert_mode_mappings
+ "http://vim.wikia.com/wiki/Use_Ctrl-O_instead_of_Esc_in_insert_mode_mappings
 imap <C-h> <C-o>h
 imap <C-j> <C-o>j
 imap <C-k> <C-o>k
@@ -133,4 +134,24 @@ map <leader>j <C-w>+
 map <leader>k <C-w>-
 map <leader>l <C-w>>
 
-nnoremap ; :
+"http://vim.wikia.com/wiki/Map_semicolon_to_colon
+map ; :
+noremap ;; ;
+
+"https://stackoverflow.com/questions/9051837/how-to-map-c-to-toggle-comments-in-vim?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa#comment11360335_9051932
+nmap <C-_> <leader>c<Space>
+vmap <C-_> <leader>c<Space>
+imap <C-_> <Esc><leader>c<Space>li
+map <silent> <Leader><Leader> :nohlsearch<cr>
+
+map <leader>f :Ag<CR>
+"http://vim.wikia.com/wiki/Avoid_the_escape_key
+imap <leader>i <Esc>
+
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+set undofile
+
+"https://medium.com/@Aenon/vim-swap-backup-undo-git-2bf353caa02f
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp// 
