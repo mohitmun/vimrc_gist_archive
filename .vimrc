@@ -26,6 +26,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdcommenter'
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'sjl/gundo.vim'
 call plug#end()
 syntax on
 
@@ -46,6 +48,8 @@ set showmatch
 
 "" Makes search act like search in modern browser
 set incsearch
+set hidden
+
 
 set backspace=indent,eol,start
 set ai "Auto indent
@@ -155,3 +159,12 @@ set undofile
 set backupdir=/tmp//
 set directory=/tmp//
 set undodir=/tmp// 
+
+set clipboard^=unnamed
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
