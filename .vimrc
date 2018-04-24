@@ -10,7 +10,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'terryma/vim-multiple-cursors' " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'amix/vim-zenroom2'
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
@@ -130,7 +130,7 @@ map <leader>nf :NERDTreeFind<cr>
 " Go to previous (last accessed) window.
 autocmd VimEnter * wincmd p
 "below command closes nerdtree if now files left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
  "http://vim.wikia.com/wiki/Use_Ctrl-O_instead_of_Esc_in_insert_mode_mappings
 imap <C-h> <C-o>h
@@ -180,3 +180,19 @@ nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
 set completeopt-=preview
 nnoremap <leader>hs :GitGutterStageHunk<CR>
 nnoremap <leader>gst :Gstatus<CR>
+
+"https://shapeshed.com/vim-netrw/
+"let g:netrw_banner = 0
+"let g:netrw_liststyle = 3
+"let g:netrw_browse_split = 4
+"let g:netrw_altv = 1
+"let g:netrw_winsize = 25
+"augroup ProjectDrawer
+  "autocmd!
+  "autocmd VimEnter * :Vexplore
+"augroup END
+set history=1000                      " Keep a bigger history of commands
+
+" Fast editing and sourcing of `.vimrc`
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
