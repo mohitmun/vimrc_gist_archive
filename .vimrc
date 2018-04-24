@@ -10,7 +10,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'terryma/vim-multiple-cursors' " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'amix/vim-zenroom2'
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
@@ -130,7 +130,7 @@ map <leader>nf :NERDTreeFind<cr>
 " Go to previous (last accessed) window.
 autocmd VimEnter * wincmd p
 "below command closes nerdtree if now files left
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
  "http://vim.wikia.com/wiki/Use_Ctrl-O_instead_of_Esc_in_insert_mode_mappings
 imap <C-h> <C-o>h
