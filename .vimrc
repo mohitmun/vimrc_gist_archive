@@ -28,8 +28,12 @@ Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdcommenter'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'sjl/gundo.vim'
+" https://vi.stackexchange.com/a/8224/15805
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'suan/vim-instant-markdown'
 call plug#end()
+
 syntax on
 
 set number
@@ -174,3 +178,5 @@ nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>pd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
 set completeopt-=preview
+nnoremap <leader>hs :GitGutterStageHunk<CR>
+nnoremap <leader>gst :Gstatus<CR>
