@@ -161,9 +161,9 @@ imap <leader>i <Esc>
 set undofile
 
 "https://medium.com/@Aenon/vim-swap-backup-undo-git-2bf353caa02f
-set backupdir=/tmp//
-set directory=/tmp//
-set undodir=/tmp// 
+set backupdir=~/.vim/backupdir//
+set directory=~/.vim/directory//
+set undodir=~/.vim/undodir// 
 
 set clipboard^=unnamed
 
