@@ -32,6 +32,7 @@ Plug 'sjl/gundo.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'suan/vim-instant-markdown'
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 syntax on
@@ -203,3 +204,4 @@ nnoremap <C-j> <C-e>
 nnoremap <C-k> <C-y>
 set iskeyword-=_
 set ttimeoutlen=50
+let g:airline#extensions#tabline#enabled = 1
