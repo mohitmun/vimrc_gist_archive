@@ -72,7 +72,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " copied previous line word by word https://web.archive.org/web/20160429070600/http://vim.wikia.com/wiki/Duplicate_previous_line_word_by_word# 
-nmap ,c @<Esc>kyWjP<BS>
+nmap ,c @{<Esc>kyWjP<BS>
 
 " Mappings for moving lines up and down in all modes.
 nnoremap ∆ :m .+1<CR>==
@@ -199,3 +199,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 ":au BufAdd,BufNewFile * nested tab sball
 nnoremap <leader>za zR
+nnoremap <C-j> <C-e>
+nnoremap <C-k> <C-y>
+set iskeyword-=_
+set ttimeoutlen=50
