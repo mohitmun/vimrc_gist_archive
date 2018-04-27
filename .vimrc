@@ -126,12 +126,13 @@ let g:NERDTreeWinSize=35
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
+map <leader>nt :NERDTreeFocus<cr>
 
 " autocmd VimEnter * NERDTree
 " Go to previous (last accessed) window.
 autocmd VimEnter * wincmd p
 "below command closes nerdtree if now files left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
  "http://vim.wikia.com/wiki/Use_Ctrl-O_instead_of_Esc_in_insert_mode_mappings
 imap <C-h> <C-o>h
@@ -205,3 +206,6 @@ nnoremap <C-k> <C-y>
 set iskeyword-=_
 set ttimeoutlen=50
 let g:airline#extensions#tabline#enabled = 1
+
+" close buffer when quitting
+map <leader>q :bd<CR>
