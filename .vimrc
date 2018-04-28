@@ -2,10 +2,13 @@
 " The ultimate vimrc https://github.com/amix/vimrc 
 " wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim and
 " move it to ~/.vim/autoload and run :PlugInstall
+" mkdir -p ~/.vim/undodir 
+" mkdir -p ~/.vim/backupdir 
+" mkdir -p ~/.vim/directory 
 call plug#begin()
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-"Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'ctrlpvim/ctrlp.vim
 Plug 'Valloric/YouCompleteMe'
 Plug 'terryma/vim-multiple-cursors' " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
 Plug 'junegunn/goyo.vim'
@@ -32,6 +35,7 @@ Plug 'sjl/gundo.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'suan/vim-instant-markdown'
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 syntax on
@@ -125,12 +129,13 @@ let g:NERDTreeWinSize=35
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
+map <leader>nt :NERDTreeFocus<cr>
 
 " autocmd VimEnter * NERDTree
 " Go to previous (last accessed) window.
 autocmd VimEnter * wincmd p
 "below command closes nerdtree if now files left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
  "http://vim.wikia.com/wiki/Use_Ctrl-O_instead_of_Esc_in_insert_mode_mappings
 imap <C-h> <C-o>h
@@ -161,9 +166,9 @@ imap <leader>i <Esc>
 set undofile
 
 "https://medium.com/@Aenon/vim-swap-backup-undo-git-2bf353caa02f
-set backupdir=/tmp//
-set directory=/tmp//
-set undodir=/tmp// 
+set backupdir=~/.vim/backupdir//
+set directory=~/.vim/directory//
+set undodir=~/.vim/undodir// 
 
 set clipboard^=unnamed
 
@@ -196,3 +201,14 @@ set history=1000                      " Keep a bigger history of commands
 " Fast editing and sourcing of `.vimrc`
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+":au BufAdd,BufNewFile * nested tab sball
+nnoremap <leader>za zR
+nnoremap <C-j> <C-e>
+nnoremap <C-k> <C-y>
+set iskeyword-=_
+set ttimeoutlen=50
+let g:airline#extensions#tabline#enabled = 1
+
+" close buffer when quitting
+map <leader>q :bd<CR>
