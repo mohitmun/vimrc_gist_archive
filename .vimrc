@@ -1,7 +1,37 @@
 " GistID: 55140b5b9c723540883f823616575c58
+"Why
+"  http://www.viemu.com/a-why-vi-vim.html	
+"Headstart	
+"  https://github.com/mhinz/vim-galore	
+"  http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/	
+"  http://www.worldtimzone.com/res/vi.html	
+"  https://danielmiessler.com/study/vim/	
+"  http://learnvimscriptthehardway.stevelosh.com/	
+"Tips	
+"  http://nvie.com/posts/how-i-boosted-my-vim/	
+"Terms	
+"  https://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/	
+"  1. Using vim-plug (https://junegunn.kr/2013/09/writing-my-own-vim-plugin-manager/	
+"  https://sanctum.geek.nz/arabesque/buffers-windows-tabs/ (Buffers/windows/tabs) 	
+"Key Learnings	
+"  Read the fucking manual, :help is powerful	
+"  Make life easier by vimrc	
+"vimrcs	
+"  https://github.com/amix/vimrc	
+"  https://github.com/nvie/vimrc/blob/master/vimrc	
+"  https://github.com/garybernhardt/dotfiles/blob/master/.vimrc	
+"  https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc	
+"  	
+"CheatSheets	
+"  https://gist.github.com/0xadada/1ea7f96d108dcfbe75c9	
+"  https://devhints.io/vim	
+"  http://www.viemu.com/vi-vim-cheat-sheet.gif The ultimate vimrc https://github.com/amix/vimrc
 " The ultimate vimrc https://github.com/amix/vimrc 
 " wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim and
 " move it to ~/.vim/autoload and run :PlugInstall
+" mkdir -p ~/.vim/undodir
+" mkdir -p ~/.vim/backupdir
+" mkdir -p ~/.vim/directory
 call plug#begin()
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
