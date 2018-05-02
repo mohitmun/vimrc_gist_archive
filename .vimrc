@@ -209,7 +209,7 @@ nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>pd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
 set completeopt-=preview
-nnoremap <leader>hs :GitGutterStageHunk<CR>
+nnoremap <leader>ggsh :GitGutterStageHunk<CR>
 nnoremap <leader>gst :Gstatus<CR>
 
 "https://shapeshed.com/vim-netrw/
