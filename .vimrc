@@ -236,7 +236,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>za zR
 nnoremap <C-j> <C-e>
 nnoremap <C-k> <C-y>
-set iskeyword-=_
+"set iskeyword-=_
 set ttimeoutlen=50
 let g:airline#extensions#tabline#enabled = 1
 " close buffer when quitting
