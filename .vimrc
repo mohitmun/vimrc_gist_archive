@@ -122,9 +122,9 @@ nmap [h <Plug>GitGutterPrevHunk
 set mouse=a
 
 " https://stackoverflow.com/a/5562707/2577465
-map gn :bn<cr>
-map gp :bp<cr>
-map gd :bd<cr>
+map <leader>gn :bn<cr>
+map <leader>gp :bp<cr>
+map <leader>gd :bd<cr>
 
 highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
 highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
