@@ -69,6 +69,7 @@ Plug 'honza/vim-snippets'
 Plug 'suan/vim-instant-markdown'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'majutsushi/tagbar'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 syntax on
@@ -252,4 +253,5 @@ let g:ale_fixers = {
 \   'java': ['google_java_format'],
 \}
 map <leader>c :w !colordiff -u % - 
-map <leader>h :exe printf('match IncSearch /\V\</Users/mohit/.vimrcs\>/', escape(expand('1'), '/\'))<CR>
+"map <leader>h :exe printf('match IncSearch /\V\</Users/mohit/.vimrcs\>/', escape(expand('1'), '/\'))<CR>
+autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\')):'match none':""
