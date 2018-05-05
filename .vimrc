@@ -18,6 +18,7 @@
 "  https://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/	
 "  1. Using vim-plug (https://junegunn.kr/2013/09/writing-my-own-vim-plugin-manager/	
 "  https://sanctum.geek.nz/arabesque/buffers-windows-tabs/ (Buffers/windows/tabs) 	
+"Vim as IDE http://vim.wikia.com/wiki/Use_Vim_like_an_IDE
 "Key Learnings	
 "  Read the fucking manual, :help is powerful	
 "  Make life easier by vimrc	
@@ -50,7 +51,7 @@ Plug 'amix/vim-zenroom2'
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim' " dependancy for gist-vim
 Plug 'vim-airline/vim-airline'
@@ -220,8 +221,9 @@ nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gc :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
 set completeopt-=preview
-nnoremap <leader>ggsh :GitGutterStageHunk<CR>
-nnoremap <leader>ggph :GitGutterPreviewHunk<CR>
+nnoremap <leader>ggs :GitGutterStageHunk<CR>
+nnoremap <leader>ggp :GitGutterPreviewHunk<CR>
+nnoremap <leader>ggu :GitGutterUndoHunk<CR>
 nnoremap <leader>gst :Gstatus<CR>
 
 "https://shapeshed.com/vim-netrw/
