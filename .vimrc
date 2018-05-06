@@ -73,6 +73,7 @@ Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug '907th/vim-auto-save'
 Plug 'machakann/vim-highlightedyank'
+Plug 'Raimondi/delimitMate'
 call plug#end()
 
 syntax on
