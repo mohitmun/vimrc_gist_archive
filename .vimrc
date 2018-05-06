@@ -1,7 +1,7 @@
 " GistID: 55140b5b9c723540883f823616575c58
 "Constantly improve at vim
 "  http://vimgolf.com
-"http://derekwyatt.org/vim/tutorials/advanced/
+  "http://derekwyatt.org/vim/tutorials/advanced/
 "https://statico.github.io/vim3.html
 "https://www.reddit.com/r/vim/comments/8gmmk3/how_to_continue_to_improve_at_vim/
 "Why
@@ -262,3 +262,7 @@ map <leader>c :w !colordiff -u % -
 "map <leader>h :exe printf('match IncSearch /\V\</Users/mohit/.vimrcs\>/', escape(expand('1'), '/\'))<CR>
 autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\')):'match none':""
 let g:auto_save = 1
+
+"http://howivim.com/2016/salvatore-sanfilippo/
+vmap q <gv
+vmap <TAB> >gv
