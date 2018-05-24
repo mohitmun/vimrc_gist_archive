@@ -75,6 +75,7 @@ Plug 'Yggdroot/indentLine'
 Plug '907th/vim-auto-save'
 Plug 'machakann/vim-highlightedyank'
 Plug 'Raimondi/delimitMate'
+Plug 'elzr/vim-json'
 call plug#end()
 
 syntax on
@@ -264,3 +265,7 @@ autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match In
 let g:auto_save = 1
 
 vnoremap // y/\V<C-R>"<CR>
+
+"http://howivim.com/2016/salvatore-sanfilippo/
+vmap q <gv	
+vmap <TAB> >gv 
