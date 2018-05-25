@@ -76,6 +76,7 @@ Plug '907th/vim-auto-save'
 Plug 'machakann/vim-highlightedyank'
 Plug 'Raimondi/delimitMate'
 Plug 'elzr/vim-json'
+Plug 'google/vim-searchindex'
 call plug#end()
 
 syntax on
@@ -269,3 +270,4 @@ vnoremap // y/\V<C-R>"<CR>
 "http://howivim.com/2016/salvatore-sanfilippo/
 vmap q <gv	
 vmap <TAB> >gv 
+source ~/.vim/cscope.vim
