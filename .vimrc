@@ -29,7 +29,7 @@
 "  https://github.com/nvie/vimrc/blob/master/vimrc	
 "  https://github.com/garybernhardt/dotfiles/blob/master/.vimrc	
 "  https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc	
-"  	
+"  https://github.com/junegunn/dotfiles/blob/master/vimrc
 "CheatSheets	
 "  https://gist.github.com/0xadada/1ea7f96d108dcfbe75c9	
 "  https://devhints.io/vim	
