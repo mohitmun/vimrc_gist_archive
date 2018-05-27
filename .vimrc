@@ -1,13 +1,14 @@
 " GistID: 55140b5b9c723540883f823616575c58
 "Constantly improve at vim
 "  http://vimgolf.com
-"http://derekwyatt.org/vim/tutorials/advanced/
+"  http://derekwyatt.org/vim/tutorials/advanced/
 "https://statico.github.io/vim3.html
 "https://www.reddit.com/r/vim/comments/8gmmk3/how_to_continue_to_improve_at_vim/
 "Why
 "  http://www.viemu.com/a-why-vi-vim.html	
 "Headstart	
 "  https://github.com/mhinz/vim-galore	
+"  https://github.com/bpierre/switch-to-vim-for-good
 "  http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/	
 "  http://www.worldtimzone.com/res/vi.html	
 "  https://danielmiessler.com/study/vim/	
@@ -66,7 +67,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'sjl/gundo.vim'
 " https://vi.stackexchange.com/a/8224/15805
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'suan/vim-instant-markdown'
 Plug 'maxbrunsfeld/vim-yankstack'
