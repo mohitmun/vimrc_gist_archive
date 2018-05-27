@@ -206,6 +206,7 @@ imap <leader>i <Esc>
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 set undofile
+inoremap jj <ESC>
 
 "https://medium.com/@Aenon/vim-swap-backup-undo-git-2bf353caa02f
 set backupdir=~/.vim/backupdir//
