@@ -78,6 +78,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'Raimondi/delimitMate'
 Plug 'elzr/vim-json'
 Plug 'google/vim-searchindex'
+Plug 'simnalamburt/vim-mundo'
 call plug#end()
 
 syntax on
@@ -272,4 +273,7 @@ vnoremap // y/\V<C-R>"<CR>
 "http://howivim.com/2016/salvatore-sanfilippo/
 vmap q <gv	
 vmap <TAB> >gv 
+"https://github.com/bpierre/dotfiles/blob/master/vimrc
+"nnoremap <C-n> i<CR><ESC>
+
 source ~/.vim/cscope.vim
