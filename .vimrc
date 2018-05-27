@@ -201,7 +201,6 @@ vmap <C-_> <leader>c<Space>
 imap <C-_> <Esc><leader>c<Space>li
 map <silent> <Leader><Leader> :nohlsearch<cr>
 
-map <leader>f :Ag<CR>
 "http://vim.wikia.com/wiki/Avoid_the_escape_key
 imap <leader>i <Esc>
 
@@ -222,6 +221,7 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
+map <leader>f :Rg<CR>
 
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
