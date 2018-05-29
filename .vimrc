@@ -81,6 +81,8 @@ Plug 'google/vim-searchindex'
 Plug 'simnalamburt/vim-mundo'
 call plug#end()
 
+source ~/.vim/cscope.vim
+
 syntax on
 
 set number
@@ -119,7 +121,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " copied previous line word by word https://web.archive.org/web/20160429070600/http://vim.wikia.com/wiki/Duplicate_previous_line_word_by_word# 
-nmap ,c @<Esc>kyWjP<BS>
+"nmap ,c @<Esc>kyWjP<BS>
 
 " Mappings for moving lines up and down in all modes.
 nnoremap ∆ :m .+1<CR>==
@@ -137,9 +139,9 @@ nmap [h <Plug>GitGutterPrevHunk
 set mouse=a
 
 " https://stackoverflow.com/a/5562707/2577465
-map <leader>gn :bn<cr>
-map <leader>gp :bp<cr>
-map <leader>gd :bd<cr>
+map gn :bn<cr>
+map gp :bp<cr>
+map gb :Buffers<cr>
 
 highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
 highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
@@ -218,8 +220,7 @@ set clipboard^=unnamed
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \  {'options': '--delimiter : --nth 2..'}, 
   \   <bang>0)
 map <leader>f :Rg<CR>
 
@@ -248,7 +249,6 @@ set history=1000                      " Keep a bigger history of commands
 " Fast editing and sourcing of `.vimrc`
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-
 ":au BufAdd,BufNewFile * nested tab sball
 nnoremap <leader>za zR
 nnoremap <C-j> <C-e>
@@ -276,4 +276,7 @@ vmap <TAB> >gv
 "https://github.com/bpierre/dotfiles/blob/master/vimrc
 "nnoremap <C-n> i<CR><ESC>
 
-source ~/.vim/cscope.vim
+"https://stackoverflow.com/a/597932/2577465
+nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
+"https://stackoverflow.com/a/8397808/2577465
+nmap , \
