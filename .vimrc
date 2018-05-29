@@ -280,3 +280,13 @@ vmap <TAB> >gv
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 "https://stackoverflow.com/a/8397808/2577465
 nmap , \
+
+"https://stackoverflow.com/a/30423919/2577465
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+
+nnoremap <leader>d ""d
+nnoremap <leader>D ""D
+vnoremap <leader>d ""d
