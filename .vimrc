@@ -164,6 +164,7 @@ let g:gist_list_vsplit = 1
 
 set nofoldenable    " disable folding
 
+set foldlevelstart=20
 map <C-p> :FZF<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
@@ -275,6 +276,7 @@ vmap q <gv
 vmap <TAB> >gv 
 "https://github.com/bpierre/dotfiles/blob/master/vimrc
 "nnoremap <C-n> i<CR><ESC>
+cmap w!! w !sudo tee > /dev/null %
 
 "https://stackoverflow.com/a/597932/2577465
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
