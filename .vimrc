@@ -70,6 +70,7 @@ Plug 'sjl/gundo.vim'
 "Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'suan/vim-instant-markdown'
+"fucks up disable cut logic
 "Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
