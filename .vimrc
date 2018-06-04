@@ -70,7 +70,7 @@ Plug 'sjl/gundo.vim'
 "Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'suan/vim-instant-markdown'
-Plug 'maxbrunsfeld/vim-yankstack'
+"Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug '907th/vim-auto-save'
@@ -285,10 +285,12 @@ nmap , \
 
 "https://stackoverflow.com/a/30423919/2577465
 nnoremap x "_x
+nnoremap X "_X
 nnoremap d "_d
 nnoremap D "_D
 vnoremap d "_d
 
-nnoremap <leader>d ""d
-nnoremap <leader>D ""D
-vnoremap <leader>d ""d
+set clipboard^=unnamed
+nnoremap <leader>d "*d
+nnoremap <leader>D "*D
+vnoremap <leader>d "*d
