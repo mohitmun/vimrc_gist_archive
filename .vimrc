@@ -296,5 +296,7 @@ nnoremap <leader>d "*d
 nnoremap <leader>D "*D
 vnoremap <leader>d "*d
 
-
 let $FZF_DEFAULT_COMMAND = 'fd --type f'
+
+map j gj
+map k gk
