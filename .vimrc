@@ -90,7 +90,7 @@ set number
 set tabstop=2 shiftwidth=2 expandtab
 set updatetime=100
 
-" let g:gitgutter_diff_base = 'HEAD'
+let g:gitgutter_diff_base = 'HEAD'
 
 "Always show current position
 set ruler
@@ -211,6 +211,7 @@ imap <leader>i <Esc>
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 set undofile
 inoremap jj <ESC>
+cmap jj <ESC>
 
 "https://medium.com/@Aenon/vim-swap-backup-undo-git-2bf353caa02f
 set backupdir=~/.vim/backupdir//
@@ -282,7 +283,7 @@ cmap w!! w !sudo tee > /dev/null %
 "https://stackoverflow.com/a/597932/2577465
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 "https://stackoverflow.com/a/8397808/2577465
-map , \
+nmap , \
 
 "https://stackoverflow.com/a/30423919/2577465
 nnoremap x "_x
