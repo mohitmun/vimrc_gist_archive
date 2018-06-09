@@ -212,6 +212,7 @@ imap <leader>i <Esc>
 set undofile
 inoremap jj <ESC>
 cmap jj <ESC>
+vmap ii <ESC>
 
 "https://medium.com/@Aenon/vim-swap-backup-undo-git-2bf353caa02f
 set backupdir=~/.vim/backupdir//
@@ -301,3 +302,5 @@ let $FZF_DEFAULT_COMMAND = 'fd --type f'
 
 map j gj
 map k gk
+map <leader>ms :MundoShow<CR>
+map <leader>mh :MundoHide<CR>
