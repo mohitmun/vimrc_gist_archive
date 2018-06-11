@@ -312,3 +312,6 @@ map j gj
 map k gk
 map <leader>ms :MundoShow<CR>
 map <leader>mh :MundoHide<CR>
+
+"https://stackoverflow.com/questions/2744010/update-cscope-db-from-vim
+map <leader>csr :!cscope -Rbq<CR>:cs reset<CR><CR>
