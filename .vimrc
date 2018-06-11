@@ -293,7 +293,8 @@ cmap w!! w !sudo tee > /dev/null %
 "https://stackoverflow.com/a/597932/2577465
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 "https://stackoverflow.com/a/8397808/2577465
-nmap , \
+map , <leader> 
+map ,, :noh<cr>
 
 "https://stackoverflow.com/a/30423919/2577465
 nnoremap x "_x
