@@ -40,6 +40,12 @@
 " mkdir -p ~/.vim/undodir
 " mkdir -p ~/.vim/backupdir
 " mkdir -p ~/.vim/directory
+"https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 call plug#begin()
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -80,6 +86,8 @@ Plug 'Raimondi/delimitMate'
 Plug 'elzr/vim-json'
 Plug 'google/vim-searchindex'
 Plug 'simnalamburt/vim-mundo'
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'benmills/vimux'
 call plug#end()
 
 source ~/.vim/cscope.vim
