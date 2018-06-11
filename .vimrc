@@ -212,6 +212,7 @@ nmap <C-_> <leader>c<Space>
 vmap <C-_> <leader>c<Space>
 imap <C-_> <Esc><leader>c<Space>li
 map <silent> <Leader><Leader> :nohlsearch<cr>
+map <C-e> :noh<cr>
 
 "http://vim.wikia.com/wiki/Avoid_the_escape_key
 imap <leader>i <Esc>
