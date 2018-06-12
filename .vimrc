@@ -84,10 +84,14 @@ Plug '907th/vim-auto-save'
 Plug 'machakann/vim-highlightedyank'
 Plug 'Raimondi/delimitMate'
 Plug 'elzr/vim-json'
-Plug 'google/vim-searchindex'
+"Plug 'google/vim-searchindex' 
+"removed this because its not compatible with is.vim
+Plug 'osyo-manga/vim-anzu'
 Plug 'simnalamburt/vim-mundo'
-Plug 'JamshedVesuna/vim-markdown-preview'
+"Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'benmills/vimux'
+Plug 'haya14busa/is.vim'
+Plug 'haya14busa/vim-asterisk'
 call plug#end()
 
 source ~/.vim/cscope.vim
@@ -268,6 +272,7 @@ nnoremap <C-j> <C-e>
 nnoremap <C-k> <C-y>
 "set iskeyword-=_
 set ttimeoutlen=50
+"set timeoutlen=500
 let g:airline#extensions#tabline#enabled = 1
 " close buffer when quitting
 map <leader>q :bd<CR>
@@ -293,8 +298,7 @@ cmap w!! w !sudo tee > /dev/null %
 "https://stackoverflow.com/a/597932/2577465
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 "https://stackoverflow.com/a/8397808/2577465
-map , <leader> 
-map ,, :noh<cr>
+nmap , \
 
 "https://stackoverflow.com/a/30423919/2577465
 nnoremap x "_x
@@ -317,3 +321,18 @@ map <leader>mh :MundoHide<CR>
 
 "https://stackoverflow.com/questions/2744010/update-cscope-db-from-vim
 map <leader>csr :!cscope -Rbq<CR>:cs reset<CR><CR>
+
+"set hlsearch
+"let g:incsearch#auto_nohlsearch = 1
+""map / <Plug>(incsearch-nohl)
+"map n  <Plug>(incsearch-nohl-n)
+"map N  <Plug>(incsearch-nohl-N)
+"map *  <Plug>(incsearch-nohl-*)
+"map #  <Plug>(incsearch-nohl-#)
+"map g* <Plug>(incsearch-nohl-g*)
+"map g# <Plug>(incsearch-nohl-g#)
+"augroup vimrc-incsearch-highlight
+  "autocmd!
+  "autocmd CmdlineEnter [/\?] :set hlsearch
+  "autocmd CmdlineLeave [/\?] :set nohlsearch
+"augroup END
