@@ -141,14 +141,18 @@ map <C-l> <C-W>l
 "nmap ,c @<Esc>kyWjP<BS>
 
 " Mappings for moving lines up and down in all modes.
-nnoremap ∆ :m .+1<CR>==
-nnoremap ˚ :m .-2<CR>==
 
-inoremap ∆ <Esc>:m .+1<CR>==gi
-inoremap ˚ <Esc>:m .-2<CR>==gi
+execute "set <M-j>=\ej"
+execute "set <M-k>=\ek"
 
-vnoremap ∆ :m '>+1<CR>gv=gv
-vnoremap ˚ :m '<-2<CR>gv=gv
+nnoremap <M-j> :m .+1<CR>==
+nnoremap <M-k> :m .-2<CR>==
+
+inoremap <M-j> <Esc>:m .+1<CR>==gi
+inoremap <M-k> <Esc>:m .-2<CR>==gi
+
+vnoremap <M-j> :m '>+1<CR>gv=gv
+vnoremap <M-k> :m '<-2<CR>gv=gv
 
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
