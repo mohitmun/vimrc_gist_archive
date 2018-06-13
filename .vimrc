@@ -78,7 +78,7 @@ Plug 'honza/vim-snippets'
 Plug 'suan/vim-instant-markdown'
 "fucks up disable cut logic
 "Plug 'maxbrunsfeld/vim-yankstack'
-Plug 'majutsushi/tagbar'
+"Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug '907th/vim-auto-save'
 Plug 'machakann/vim-highlightedyank'
@@ -152,7 +152,7 @@ nmap [h <Plug>GitGutterPrevHunk
 set mouse=a
 
 " https://stackoverflow.com/a/5562707/2577465
-map gn :bn<cr>
+"map gn :bn<cr>
 map gp :bp<cr>
 map gb :Buffers<cr>
 
@@ -336,3 +336,16 @@ map <leader>csr :!cscope -Rbq<CR>:cs reset<CR><CR>
   "autocmd CmdlineEnter [/\?] :set hlsearch
   "autocmd CmdlineLeave [/\?] :set nohlsearch
 "augroup END
+"map *   <Plug>(asterisk-*)
+"map #   <Plug>(asterisk-#)
+"map g*  <Plug>(asterisk-g*)
+"map g#  <Plug>(asterisk-g#)
+"map z*  <Plug>(asterisk-z*)
+"map gz* <Plug>(asterisk-gz*)
+"map z#  <Plug>(asterisk-z#)
+"map gz# <Plug>(asterisk-gz#)
+"let g:asterisk#keeppos = 1
+"mmm *  <Plug>(asterisk-z*)
+"map #  <Plug>(asterisk-z#)
+"map g* <Plug>(asterisk-gz*)
+"map g# <Plug>(asterisk-gz#)
