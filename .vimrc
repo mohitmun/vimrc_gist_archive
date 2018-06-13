@@ -91,9 +91,11 @@ Plug 'simnalamburt/vim-mundo'
 "Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'benmills/vimux'
 Plug 'haya14busa/is.vim'
-Plug 'sickill/vim-monokai'
+Plug 'crusoexia/vim-monokai'
+"Plug 'sickill/vim-monokai'
 Plug 'cocopon/iceberg.vim'
 Plug 'haya14busa/vim-asterisk'
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 source ~/.vim/cscope.vim
@@ -245,6 +247,7 @@ map <leader>f :Rg<CR>
 colorscheme monokai
 " monokai with complete dark
 hi Normal ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
+hi LineNr ctermfg=102 ctermbg=NONE cterm=NONE guifg=#90908a guibg=#3c3d37 gui=NONE
 
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
