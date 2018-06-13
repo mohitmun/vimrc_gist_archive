@@ -152,7 +152,7 @@ nmap [h <Plug>GitGutterPrevHunk
 set mouse=a
 
 " https://stackoverflow.com/a/5562707/2577465
-"map gn :bn<cr>
+map gn :bn<cr>
 map gp :bp<cr>
 map gb :Buffers<cr>
 
