@@ -75,6 +75,7 @@ Plug 'sjl/gundo.vim'
 " https://vi.stackexchange.com/a/8224/15805
 "Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'liuchengxu/space-vim'
 Plug 'suan/vim-instant-markdown'
 "fucks up disable cut logic
 "Plug 'maxbrunsfeld/vim-yankstack'
@@ -107,6 +108,7 @@ set tabstop=2 shiftwidth=2 expandtab
 set updatetime=100
 
 let g:gitgutter_diff_base = 'HEAD'
+autocmd BufWritePost * GitGutter
 
 "Always show current position
 set ruler
@@ -175,7 +177,7 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <C-r><C-o>+
 set foldmethod=indent
-
+set cursorline
 " https://stackoverflow.com/a/360634/2577465
 nnoremap <space> za
 vnoremap <space> zf
