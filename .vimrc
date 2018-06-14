@@ -75,7 +75,6 @@ Plug 'sjl/gundo.vim'
 " https://vi.stackexchange.com/a/8224/15805
 "Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'liuchengxu/space-vim'
 Plug 'suan/vim-instant-markdown'
 "fucks up disable cut logic
 "Plug 'maxbrunsfeld/vim-yankstack'
