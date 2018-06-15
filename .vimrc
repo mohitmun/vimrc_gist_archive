@@ -16,6 +16,8 @@
 "  https://github.com/learnbyexample/scripting_course/blob/master/Vim_curated_resources.md
 "Tips	
 "  http://nvie.com/posts/how-i-boosted-my-vim/	
+"Refactoring in vim
+"  https://stackoverflow.com/a/8783131/2577465
 "Terms	
 "  https://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/	
 "  1. Using vim-plug (https://junegunn.kr/2013/09/writing-my-own-vim-plugin-manager/	
@@ -40,6 +42,7 @@
 " mkdir -p ~/.vim/undodir
 " mkdir -p ~/.vim/backupdir
 " mkdir -p ~/.vim/directory
+
 "https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -253,6 +256,7 @@ colorscheme monokai
 " monokai with complete dark
 hi Normal ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
 hi LineNr ctermfg=102 ctermbg=NONE cterm=NONE guifg=#90908a guibg=#3c3d37 gui=NONE
+hi Search guibg=peru guifg=wheat
 
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
