@@ -50,7 +50,7 @@ call plug#begin()
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "Plug 'ctrlpvim/ctrlp.vim
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'terryma/vim-multiple-cursors' " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -93,9 +93,9 @@ Plug 'benmills/vimux'
 Plug 'haya14busa/is.vim'
 Plug 'crusoexia/vim-monokai'
 "Plug 'sickill/vim-monokai'
-Plug 'cocopon/iceberg.vim'
 Plug 'haya14busa/vim-asterisk'
 Plug 'pangloss/vim-javascript'
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 source ~/.vim/cscope.vim
@@ -107,7 +107,7 @@ set tabstop=2 shiftwidth=2 expandtab
 set updatetime=100
 
 let g:gitgutter_diff_base = 'HEAD'
-autocmd BufWritePost * GitGutter
+autocmd BufWritePost * GitGutterAll
 
 "Always show current position
 set ruler
@@ -176,7 +176,7 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <C-r><C-o>+
 set foldmethod=indent
-set cursorline
+"set cursorline
 " https://stackoverflow.com/a/360634/2577465
 nnoremap <space> za
 vnoremap <space> zf
