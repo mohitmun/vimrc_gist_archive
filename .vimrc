@@ -367,3 +367,6 @@ map <leader>csr :!cscope -Rbq<CR>:cs reset<CR><CR>
 "map #  <Plug>(asterisk-z#)
 "map g* <Plug>(asterisk-gz*)
 "map g# <Plug>(asterisk-gz#)
+
+autocmd InsertEnter * set cul
+autocmd InsertLeave * set nocul
