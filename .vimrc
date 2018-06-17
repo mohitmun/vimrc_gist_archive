@@ -99,6 +99,7 @@ Plug 'crusoexia/vim-monokai'
 Plug 'haya14busa/vim-asterisk'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-ruby/vim-ruby'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 source ~/.vim/cscope.vim
