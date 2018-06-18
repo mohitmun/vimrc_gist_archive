@@ -101,6 +101,7 @@ Plug 'haya14busa/vim-asterisk'
 Plug 'pangloss/vim-javascript'
 Plug 'brooth/far.vim'
 Plug 'vim-ruby/vim-ruby'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 source ~/.vim/cscope.vim
@@ -368,3 +369,8 @@ map <leader>csr :!cscope -Rbq<CR>:cs reset<CR><CR>
 "map #  <Plug>(asterisk-z#)
 "map g* <Plug>(asterisk-gz*)
 "map g# <Plug>(asterisk-gz#)
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+autocmd InsertEnter * set cul
+autocmd InsertLeave * set nocul
