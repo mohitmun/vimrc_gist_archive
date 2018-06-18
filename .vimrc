@@ -2,8 +2,9 @@
 "Constantly improve at vim
 "  http://vimgolf.com
 "  http://derekwyatt.org/vim/tutorials/advanced/
-"https://statico.github.io/vim3.html
-"https://www.reddit.com/r/vim/comments/8gmmk3/how_to_continue_to_improve_at_vim/
+"  https://statico.github.io/vim3.html
+"  https://www.reddit.com/r/vim/comments/8gmmk3/how_to_continue_to_improve_at_vim/
+"  https://stackoverflow.com/q/726894/2577465
 "Why
 "  http://www.viemu.com/a-why-vi-vim.html	
 "Headstart	
@@ -53,7 +54,7 @@ call plug#begin()
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "Plug 'ctrlpvim/ctrlp.vim
-"Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 Plug 'terryma/vim-multiple-cursors' " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -98,8 +99,8 @@ Plug 'crusoexia/vim-monokai'
 "Plug 'sickill/vim-monokai'
 Plug 'haya14busa/vim-asterisk'
 Plug 'pangloss/vim-javascript'
+Plug 'brooth/far.vim'
 Plug 'vim-ruby/vim-ruby'
-Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 source ~/.vim/cscope.vim
@@ -367,8 +368,3 @@ map <leader>csr :!cscope -Rbq<CR>:cs reset<CR><CR>
 "map #  <Plug>(asterisk-z#)
 "map g* <Plug>(asterisk-gz*)
 "map g# <Plug>(asterisk-gz#)
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-autocmd InsertEnter * set cul
-autocmd InsertLeave * set nocul
