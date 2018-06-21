@@ -211,17 +211,6 @@ autocmd VimEnter * wincmd p
 "below command closes nerdtree if now files left
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
- "http://vim.wikia.com/wiki/Use_Ctrl-O_instead_of_Esc_in_insert_mode_mappings
-imap <C-h> <C-o>h
-imap <C-j> <C-o>j
-imap <C-k> <C-o>k
-imap <C-l> <C-o>l
-
-map <leader>h <C-w><
-map <leader>j <C-w>+
-map <leader>k <C-w>-
-map <leader>l <C-w>>
-
 "http://vim.wikia.com/wiki/Map_semicolon_to_colon
 map ; :
 noremap ;; ;
@@ -381,5 +370,8 @@ set ttymouse=xterm2
 map <leader>h :History<CR>
 
 "https://stackoverflow.com/a/4740069/2577465
-inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("j"))
-inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("k"))
+"http://vim.wikia.com/wiki/Use_Ctrl-O_instead_of_Esc_in_insert_mode_mappings
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("\<C-g>k"))
+inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("\<C-g>j"))
