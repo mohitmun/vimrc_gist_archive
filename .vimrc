@@ -44,64 +44,63 @@
 " mkdir -p ~/.vim/backupdir
 " mkdir -p ~/.vim/directory
 
-  "https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
-  if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-  endif
-  call plug#begin()
+"https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin()
 
-  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-  "Plug 'ctrlpvim/ctrlp.vim
-  Plug 'Valloric/YouCompleteMe'
-  Plug 'terryma/vim-multiple-cursors' " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
-  Plug 'junegunn/goyo.vim'
-  Plug 'junegunn/limelight.vim'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'amix/vim-zenroom2'
-  " fugitive.vim: a Git wrapper so awesome, it should be illegal
-  Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-surround'
-  "Plug 'w0rp/ale'
-  Plug 'mattn/gist-vim'
-  Plug 'mattn/webapi-vim' " dependancy for gist-vim
-  Plug 'vim-airline/vim-airline'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'vim-ruby/vim-ruby'
-  Plug 'Chiel92/vim-autoformat'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
-  Plug 'junegunn/vim-easy-align'
-  Plug 'scrooloose/nerdcommenter'
-  Plug 'yuttie/comfortable-motion.vim'
-  Plug 'sjl/gundo.vim'
-  " https://vi.stackexchange.com/a/8224/15805
-  "Plug 'SirVer/ultisnips'
-  Plug 'honza/vim-snippets'
-  Plug 'suan/vim-instant-markdown'
-  "fucks up disable cut logic
-  "Plug 'maxbrunsfeld/vim-yankstack'
-  "Plug 'majutsushi/tagbar'
-  Plug 'Yggdroot/indentLine'
-  Plug '907th/vim-auto-save'
-  Plug 'machakann/vim-highlightedyank'
-  Plug 'Raimondi/delimitMate'
-  Plug 'elzr/vim-json'
-  "Plug 'google/vim-searchindex' 
-  "removed this because its not compatible with is.vim
-  Plug 'osyo-manga/vim-anzu'
-  Plug 'simnalamburt/vim-mundo'
-  "Plug 'JamshedVesuna/vim-markdown-preview'
-  Plug 'benmills/vimux'
-  Plug 'haya14busa/is.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+"Plug 'ctrlpvim/ctrlp.vim
+"Plug 'Valloric/YouCompleteMe'
+Plug 'terryma/vim-multiple-cursors' " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'amix/vim-zenroom2'
+" fugitive.vim: a Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+"Plug 'w0rp/ale'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim' " dependancy for gist-vim
+Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
+Plug 'Chiel92/vim-autoformat'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'scrooloose/nerdcommenter'
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'sjl/gundo.vim'
+" https://vi.stackexchange.com/a/8224/15805
+"Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'suan/vim-instant-markdown'
+"fucks up disable cut logic
+"Plug 'maxbrunsfeld/vim-yankstack'
+"Plug 'majutsushi/tagbar'
+Plug 'Yggdroot/indentLine'
+Plug '907th/vim-auto-save'
+Plug 'machakann/vim-highlightedyank'
+Plug 'Raimondi/delimitMate'
+Plug 'elzr/vim-json'
+"Plug 'google/vim-searchindex' 
+"removed this because its not compatible with is.vim
+Plug 'osyo-manga/vim-anzu'
+Plug 'simnalamburt/vim-mundo'
+"Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'benmills/vimux'
+Plug 'haya14busa/is.vim'
 Plug 'crusoexia/vim-monokai'
 "Plug 'sickill/vim-monokai'
 Plug 'haya14busa/vim-asterisk'
 Plug 'pangloss/vim-javascript'
 Plug 'brooth/far.vim'
 Plug 'vim-ruby/vim-ruby'
-
+Plug 'MattesGroeger/vim-bookmarks'
 Plug 'easymotion/vim-easymotion'
 call plug#end()
 
@@ -373,10 +372,14 @@ map <leader>csr :!cscope -Rbq<CR>:cs reset<CR><CR>
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-autocmd InsertEnter * set cul
-autocmd InsertLeave * set nocul
+"autocmd InsertEnter * set cul
+"autocmd InsertLeave * set nocul
 autocmd FileType help wincmd L
 map ,, <Leader><Leader>
 " tmux knows the extended mouse mode
 set ttymouse=xterm2
 map <leader>h :History<CR>
+
+"https://stackoverflow.com/a/4740069/2577465
+inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("j"))
+inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("k"))
