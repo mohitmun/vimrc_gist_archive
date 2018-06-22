@@ -243,7 +243,7 @@ command! -bang -nargs=* Rg
   \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
   \  {'options': '--delimiter : --nth 2..'}, 
   \   <bang>0)
-map <leader>f :Rg<CR>
+map <leader>f :Ag<CR>
 colorscheme monokai
 " monokai with complete dark
 hi Normal ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
@@ -375,3 +375,5 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("\<C-g>k"))
 inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("\<C-g>j"))
+
+let g:airline#extensions#branch#enabled = 0
