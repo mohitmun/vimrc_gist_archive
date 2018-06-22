@@ -379,3 +379,6 @@ inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("\<C-g>k"))
 inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("\<C-g>j"))
 
 let g:airline#extensions#branch#enabled = 0
+
+"https://github.com/mrzool/dotfiles/blob/master/vim/.vimrc#L112
+set dictionary=/usr/share/dict/words
