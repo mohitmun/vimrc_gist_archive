@@ -19,6 +19,7 @@
 "  http://nvie.com/posts/how-i-boosted-my-vim/	
 "Refactoring in vim
 "  https://stackoverflow.com/a/8783131/2577465
+"https://kev.town/2010/12/15/this-is-your-brain-on-vim/
 "Terms	
 "  https://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/	
 "  1. Using vim-plug (https://junegunn.kr/2013/09/writing-my-own-vim-plugin-manager/	
@@ -382,3 +383,5 @@ let g:airline#extensions#branch#enabled = 0
 
 "https://github.com/mrzool/dotfiles/blob/master/vim/.vimrc#L112
 set dictionary=/usr/share/dict/words
+" make Y behave like D and C
+nnoremap Y y$
