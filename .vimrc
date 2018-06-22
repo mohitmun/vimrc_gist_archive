@@ -367,6 +367,9 @@ autocmd FileType help wincmd L
 map ,, <Leader><Leader>
 " tmux knows the extended mouse mode
 set ttymouse=xterm2
+unmap <leader>hu
+unmap <leader>hp
+unmap <leader>hs
 map <leader>h :History<CR>
 
 "https://stackoverflow.com/a/4740069/2577465
