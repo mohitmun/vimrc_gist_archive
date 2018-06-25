@@ -65,7 +65,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 "Plug 'w0rp/ale'
-Plug 'mattn/gist-vim'
+Plug 'mohitmun/gist-vim'
 Plug 'mattn/webapi-vim' " dependancy for gist-vim
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
