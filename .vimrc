@@ -385,3 +385,9 @@ let g:airline#extensions#branch#enabled = 0
 set dictionary=/usr/share/dict/words
 " make Y behave like D and C
 nnoremap Y y$
+
+map <leader>jpp :%!jq '.'<CR>
+cnoremap jq %!jq
+set noeol
+vnoremap > >gv
+vnoremap < <gv
