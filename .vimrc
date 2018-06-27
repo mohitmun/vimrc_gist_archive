@@ -391,3 +391,5 @@ cnoremap jq %!jq
 set noeol
 vnoremap > >gv
 vnoremap < <gv
+
+let g:fzf_history_dir = '~/.vim/fzf-history'
