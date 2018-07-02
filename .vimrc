@@ -64,6 +64,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 "Plug 'w0rp/ale'
 Plug 'mohitmun/gist-vim'
 Plug 'mattn/webapi-vim' " dependancy for gist-vim
@@ -317,6 +318,10 @@ nnoremap d "_d
 nnoremap D "_D
 vnoremap d "_d
 
+nnoremap c "_c
+nnoremap C "_C
+vnoremap c "_c
+
 set clipboard^=unnamed
 nnoremap <leader>d "*d
 nnoremap <leader>D "*D
@@ -388,7 +393,7 @@ nnoremap Y y$
 
 map <leader>jpp :%!jq '.'<CR>
 cnoremap jq %!jq
-set noeol
+"set noeol
 vnoremap > >gv
 vnoremap < <gv
 
