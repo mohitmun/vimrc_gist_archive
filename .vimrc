@@ -103,6 +103,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'brooth/far.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'MattesGroeger/vim-bookmarks'
+Plug 'ervandew/supertab'
 Plug 'easymotion/vim-easymotion'
 call plug#end()
 
