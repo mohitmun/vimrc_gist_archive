@@ -246,6 +246,9 @@ command! -bang -nargs=* Rg
   \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
   \  {'options': '--delimiter : --nth 2..'}, 
   \   <bang>0)
+
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+
 map <leader>f :Ag<CR>
 colorscheme monokai
 " monokai with complete dark
