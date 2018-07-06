@@ -105,6 +105,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'ervandew/supertab'
 Plug 'easymotion/vim-easymotion'
+"Plug 'wellle/targets.vim'
 call plug#end()
 
 source ~/.vim/cscope.vim
@@ -248,7 +249,6 @@ command! -bang -nargs=* Rg
   \   <bang>0)
 
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
-
 map <leader>f :Ag<CR>
 colorscheme monokai
 " monokai with complete dark
@@ -397,7 +397,7 @@ nnoremap Y y$
 
 map <leader>jpp :%!jq '.'<CR>
 cnoremap jq %!jq
-"set noeol
+set noeol
 vnoremap > >gv
 vnoremap < <gv
 
