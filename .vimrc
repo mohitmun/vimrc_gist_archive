@@ -106,6 +106,11 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'ervandew/supertab'
 Plug 'easymotion/vim-easymotion'
 "Plug 'wellle/targets.vim'
+" dependancy for vim-markdown
+"Plug 'godlygeek/tabular'
+"Plug 'plasticboy/vim-markdown'
+Plug 'osyo-manga/vim-over'
+Plug 'haya14busa/vim-edgemotion'
 call plug#end()
 
 source ~/.vim/cscope.vim
