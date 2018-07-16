@@ -407,3 +407,11 @@ vnoremap > >gv
 vnoremap < <gv
 
 let g:fzf_history_dir = '~/.vim/fzf-history'
+
+"https://github.com/ervandew/supertab/issues/53#issuecomment-9980930
+let g:SuperTabCrMapping = 0
+let g:SuperTabDefaultCompletionType = 'context'
+autocmd FileType *
+      \ if &omnifunc != '' |
+      \     call SuperTabChain(&omnifunc, '<c-p>') |
+      \ endif
