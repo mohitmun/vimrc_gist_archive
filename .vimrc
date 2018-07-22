@@ -84,11 +84,15 @@ Plug 'suan/vim-instant-markdown'
 "fucks up disable cut logic
 "Plug 'maxbrunsfeld/vim-yankstack'
 "Plug 'majutsushi/tagbar'
-Plug 'Yggdroot/indentLine'
+
+" slow downs cursor moment on large files
+"Plug 'Yggdroot/indentLine'
 Plug '907th/vim-auto-save'
 Plug 'machakann/vim-highlightedyank'
 Plug 'Raimondi/delimitMate'
 Plug 'elzr/vim-json'
+
+
 "Plug 'google/vim-searchindex' 
 "removed this because its not compatible with is.vim
 Plug 'osyo-manga/vim-anzu'
