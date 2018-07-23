@@ -419,6 +419,7 @@ autocmd FileType *
       \     call SuperTabChain(&omnifunc, '<c-p>') |
       \ endif
 
+"https://gist.github.com/55140b5b9c723540883f823616575c58
 fu! SaveSess()
   execute 'mksession! ' . getcwd() . '/.session.vim'
 endfunction
