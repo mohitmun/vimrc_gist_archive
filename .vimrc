@@ -288,7 +288,7 @@ nnoremap <leader>gst :Gstatus<CR>
 set history=1000                      " Keep a bigger history of commands
 
 " Fast editing and sourcing of `.vimrc`
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 ":au BufAdd,BufNewFile * nested tab sball
 nnoremap <leader>za zR
@@ -311,7 +311,7 @@ autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match In
 let g:auto_save = 1
 
 " BS because ctrl-R inserts ^M character
-vnoremap // y/\V<C-R>"<BS><CR>
+vnoremap // y/\V<C-R>"<BS>
 
 "http://howivim.com/2016/salvatore-sanfilippo/
 vmap q <gv	
