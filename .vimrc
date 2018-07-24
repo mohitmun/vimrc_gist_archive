@@ -232,8 +232,10 @@ noremap ;; ;
 nmap <C-_> <leader>c<Space>
 vmap <C-_> <leader>c<Space>
 imap <C-_> <Esc><leader>c<Space>li
-map <silent> <Leader><Leader> :nohlsearch<cr>
-map <C-e> :noh<cr>
+
+"Not needed because of plugin
+"map <silent> <Leader><Leader> :nohlsearch<cr>
+"map <C-e> :noh<cr>
 
 "http://vim.wikia.com/wiki/Avoid_the_escape_key
 imap <leader>i <Esc>
@@ -311,8 +313,9 @@ autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match In
 let g:auto_save = 1
 
 " BS because ctrl-R inserts ^M character
-vnoremap // y/\V<C-R>"<BS>
-
+"vnoremap // y/\V<C-R>"<BS>
+"http://vim.wikia.com/wiki/Search_for_visually_selected_text
+vnoremap // y/\V<C-r>=escape(@",'/\')<CR>
 "http://howivim.com/2016/salvatore-sanfilippo/
 vmap q <gv	
 vmap <TAB> >gv 
