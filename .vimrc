@@ -86,7 +86,7 @@ Plug 'suan/vim-instant-markdown'
 "Plug 'majutsushi/tagbar'
 
 " slow downs cursor moment on large files
-"Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 Plug '907th/vim-auto-save'
 Plug 'machakann/vim-highlightedyank'
 Plug 'Raimondi/delimitMate'
@@ -310,7 +310,8 @@ map <leader>c :w !colordiff -u % -
 autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\')):'match none':""
 let g:auto_save = 1
 
-vnoremap // y/\V<C-R>"<CR>
+" BS because ctrl-R inserts ^M character
+vnoremap // y/\V<C-R>"<BS><CR>
 
 "http://howivim.com/2016/salvatore-sanfilippo/
 vmap q <gv	
