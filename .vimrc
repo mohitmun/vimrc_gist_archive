@@ -446,5 +446,5 @@ endfunction
 
 set sessionoptions-=options
 
-map \ssess :call SaveSess()
-map \rsess :call RestoreSess()
+map \ssess :call SaveSess()<CR>
+map \rsess :call RestoreSess()<CR>
