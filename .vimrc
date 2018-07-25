@@ -445,3 +445,6 @@ endfunction
 "autocmd VimEnter * nested call RestoreSess()
 
 set sessionoptions-=options
+
+map \ssess :call SaveSess()
+map \rsess :call RestoreSess()
