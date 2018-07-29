@@ -1,4 +1,4 @@
-" GistID: 55140b5b9c723540883f823616575c58
+" GistID: 963f95aaf61d50e512511ac4eb097e50
 "Constantly improve at vim
 "  http://vimgolf.com
 "  http://derekwyatt.org/vim/tutorials/advanced/
