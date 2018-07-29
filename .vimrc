@@ -447,8 +447,8 @@ endfunction
 
 set sessionoptions-=options
 
-map \ssess :call SaveSess()<CR>
-map \rsess :call RestoreSess()<CR>
+map \ss :call SaveSess()<CR>
+map \rs :call RestoreSess()<CR>
 
 " http://vim.wikia.com/wiki/Add_a_newline_after_given_patterns
 " Insert a newline after each specified string (or before if use '!').
